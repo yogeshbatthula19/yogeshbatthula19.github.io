@@ -27,7 +27,9 @@ const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 /* ===== STAGGERED CARD REVEAL ===== */
-const cards = Array.from(document.querySelectorAll('.card'));
+const cards = Array.from(document.querySelectorAll(
+  '.card, .cs-stat-card, .cs-card, .cs-tech-card'
+));
 
 // Stagger cards in groups of 4 (matching the 4-column grid), 60ms apart
 const STAGGER_GROUP = 4;
@@ -44,3 +46,4 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
 
 cards.forEach(card => revealObserver.observe(card));
+

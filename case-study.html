@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="E-Commerce Platform — Case Study by Yogesh Batthula" />
+  <title>E-Commerce Platform · Case Study — Yogesh Batthula</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="cs-page">
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">YB</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="index.html#about"   class="nav-link">About</a></li>
+        <li><a href="index.html#work"    class="nav-link">Work</a></li>
+        <li><a href="case-study.html"    class="nav-link nav-link--active">Case Study</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="mailto:yogeshbatthula19@gmail.com" class="nav-cta">Let's talk →</a>
+    </div>
+  </nav>
+
+  <!-- ===== CASE STUDY CONTENT ===== -->
+  <main class="cs-main">
+
+    <!-- BACK LINK -->
+    <div class="cs-breadcrumb">
+      <a href="index.html" class="cs-back">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+        Back to portfolio
+      </a>
+    </div>
+
+    <!-- PROJECT HERO -->
+    <section class="cs-hero">
+      <!-- 3D illustration: stacked layers -->
+      <div class="cs-hero-3d" aria-hidden="true">
+        <div class="layers-illus">
+          <div class="layer layer-1"></div>
+          <div class="layer layer-2"></div>
+          <div class="layer layer-3"></div>
+          <div class="layer layer-4"></div>
+          <div class="layer-dot ld-1"></div>
+          <div class="layer-dot ld-2"></div>
+          <div class="layer-dot ld-3"></div>
+        </div>
+      </div>
+      <div class="cs-hero-content">
+        <div class="cs-meta-row">
+          <span class="cs-num">01</span>
+          <span class="cs-badge">Case Study</span>
+          <span class="cs-badge cs-badge--outline">E-Commerce</span>
+        </div>
+        <h1 class="cs-title">E-Commerce<br/>Platform</h1>
+        <p class="cs-subtitle">
+          A full-featured, microservices-based online store handling real-time inventory,
+          secure multi-currency checkout, and a self-service admin dashboard — serving
+          thousands of daily users.
+        </p>
+        <div class="cs-hero-tags">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>Stripe</span>
+          <span>AWS</span>
+          <span>Docker</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW STATS -->
+    <section class="cs-section">
+      <div class="cs-stats-grid">
+        <div class="cs-stat-card dark">
+          <span class="cs-stat-num">3×</span>
+          <span class="cs-stat-lbl">Faster page loads after optimization</span>
+        </div>
+        <div class="cs-stat-card light">
+          <span class="cs-stat-num">40%</span>
+          <span class="cs-stat-lbl">Increase in conversion rate</span>
+        </div>
+        <div class="cs-stat-card dark">
+          <span class="cs-stat-num">99.9%</span>
+          <span class="cs-stat-lbl">Uptime on AWS infrastructure</span>
+        </div>
+        <div class="cs-stat-card white">
+          <span class="cs-stat-num">6 mo</span>
+          <span class="cs-stat-lbl">From concept to production launch</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW BENTO ROW -->
+    <section class="cs-section cs-overview-grid">
+
+      <!-- Problem -->
+      <div class="cs-card dark cs-card--problem">
+        <!-- 3D cube illustration -->
+        <div class="cs-cube-illus" aria-hidden="true">
+          <div class="cube cube-lg">
+            <div class="cube-face face-top"></div>
+            <div class="cube-face face-right"></div>
+            <div class="cube-face face-left"></div>
+          </div>
+          <div class="cube cube-sm cube-sm-alt">
+            <div class="cube-face face-top"></div>
+            <div class="cube-face face-right"></div>
+            <div class="cube-face face-left"></div>
+          </div>
+        </div>
+        <p class="cs-eyebrow">The Problem</p>
+        <h2 class="cs-card-title">A fragile monolith limiting growth</h2>
+        <p class="cs-card-body">
+          The client's existing platform was a coupled PHP monolith struggling under peak
+          traffic. Checkout failures, slow load times, and no mobile-optimised experience
+          were costing revenue every day.
+        </p>
+        <ul class="cs-list">
+          <li>Checkout timeout rate of 12% under normal load</li>
+          <li>No real-time stock visibility for warehouse staff</li>
+          <li>Manual order processing adding 2–3 hours per day</li>
+          <li>Zero API surface for future mobile or third-party integrations</li>
+        </ul>
+      </div>
+
+      <!-- Solution -->
+      <div class="cs-card white cs-card--solution">
+        <p class="cs-eyebrow cs-eyebrow--dark">The Solution</p>
+        <h2 class="cs-card-title cs-card-title--dark">Microservices re-architecture, built for scale</h2>
+        <p class="cs-card-body cs-card-body--dark">
+          I designed and built a decoupled microservices architecture with independent
+          services for auth, inventory, orders, and payments — communicating via a
+          message queue, all deployed on AWS ECS behind an Application Load Balancer.
+        </p>
+        <div class="cs-solution-pills">
+          <span>Independent deployment</span>
+          <span>Horizontal scaling</span>
+          <span>Event-driven updates</span>
+          <span>Circuit breakers</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="cs-section">
+      <p class="cs-section-eyebrow">Process</p>
+      <h2 class="cs-section-title">How the project unfolded</h2>
+      <div class="cs-timeline">
+
+        <div class="cs-tl-item">
+          <div class="cs-tl-marker">
+            <div class="cs-tl-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+            </div>
+          </div>
+          <div class="cs-tl-content">
+            <span class="cs-tl-phase">Phase 01 — Discovery</span>
+            <h3 class="cs-tl-heading">Stakeholder interviews &amp; system audit</h3>
+            <p class="cs-tl-body">
+              Worked with the client's team to map all existing business logic, third-party
+              integrations, and pain points. Produced a service dependency diagram and
+              identified the highest-risk areas for migration.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-tl-item">
+          <div class="cs-tl-marker">
+            <div class="cs-tl-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+            </div>
+          </div>
+          <div class="cs-tl-content">
+            <span class="cs-tl-phase">Phase 02 — Architecture</span>
+            <h3 class="cs-tl-heading">Service design &amp; data modelling</h3>
+            <p class="cs-tl-body">
+              Defined service boundaries, API contracts (OpenAPI 3), and database schemas.
+              Chose MongoDB for product/order data and Redis for session caching and
+              pub/sub messaging between services.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-tl-item">
+          <div class="cs-tl-marker">
+            <div class="cs-tl-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+          </div>
+          <div class="cs-tl-content">
+            <span class="cs-tl-phase">Phase 03 — Build</span>
+            <h3 class="cs-tl-heading">Iterative development with CI/CD</h3>
+            <p class="cs-tl-body">
+              Built and shipped each service incrementally behind a feature flag, enabling
+              the team to test in production without risk. All services were containerised
+              with Docker and deployed via GitHub Actions → AWS ECR → ECS.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-tl-item">
+          <div class="cs-tl-marker">
+            <div class="cs-tl-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+          </div>
+          <div class="cs-tl-content">
+            <span class="cs-tl-phase">Phase 04 — Launch &amp; Optimise</span>
+            <h3 class="cs-tl-heading">Zero-downtime migration &amp; performance tuning</h3>
+            <p class="cs-tl-body">
+              Used a strangler-fig migration pattern to cut traffic over from the old
+              platform with zero downtime. Post-launch profiling reduced average API
+              response time from 420 ms to 130 ms through query optimisation and caching.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECH DEEP DIVE -->
+    <section class="cs-section">
+      <p class="cs-section-eyebrow">Tech Stack</p>
+      <h2 class="cs-section-title">Built with purpose, not hype</h2>
+      <div class="cs-tech-grid">
+
+        <div class="cs-tech-card dark">
+          <!-- 3D floating ring illustration -->
+          <div class="cs-ring-illus" aria-hidden="true">
+            <div class="sphere-3d">
+              <div class="sphere-ring ring-1"></div>
+              <div class="sphere-ring ring-2"></div>
+              <div class="sphere-core"></div>
+            </div>
+          </div>
+          <p class="cs-tech-layer">Frontend</p>
+          <ul class="cs-tech-list">
+            <li><strong>React 18</strong> — component-driven UI with code splitting</li>
+            <li><strong>TypeScript</strong> — end-to-end type safety</li>
+            <li><strong>Tailwind CSS</strong> — utility-first styling, zero unused CSS in prod</li>
+            <li><strong>React Query</strong> — server state management &amp; caching</li>
+          </ul>
+        </div>
+
+        <div class="cs-tech-card white">
+          <p class="cs-tech-layer cs-tech-layer--dark">Backend</p>
+          <ul class="cs-tech-list cs-tech-list--dark">
+            <li><strong>Node.js + Express</strong> — API gateway &amp; service layer</li>
+            <li><strong>MongoDB Atlas</strong> — flexible document store for products &amp; orders</li>
+            <li><strong>Redis</strong> — session caching &amp; event pub/sub</li>
+            <li><strong>Stripe API</strong> — PCI-compliant payment processing</li>
+          </ul>
+        </div>
+
+        <div class="cs-tech-card light">
+          <p class="cs-tech-layer cs-tech-layer--mid">Infrastructure</p>
+          <ul class="cs-tech-list cs-tech-list--mid">
+            <li><strong>AWS ECS (Fargate)</strong> — serverless container orchestration</li>
+            <li><strong>AWS CloudFront</strong> — global CDN with edge caching</li>
+            <li><strong>Docker</strong> — reproducible build &amp; deployment environments</li>
+            <li><strong>GitHub Actions</strong> — automated CI/CD pipeline</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="cs-section cs-results-section">
+      <div class="cs-results-content">
+        <p class="cs-section-eyebrow cs-section-eyebrow--light">Outcome</p>
+        <h2 class="cs-section-title cs-section-title--light">Measurable impact from day one</h2>
+        <p class="cs-results-body">
+          Within the first 30 days post-launch the platform handled Black Friday traffic
+          (4× normal load) with no incidents, and the client reported a significant
+          improvement in customer satisfaction scores.
+        </p>
+      </div>
+      <div class="cs-results-grid">
+        <div class="cs-result-item">
+          <span class="cs-result-num">0%</span>
+          <span class="cs-result-lbl">Checkout failure rate (down from 12%)</span>
+        </div>
+        <div class="cs-result-item">
+          <span class="cs-result-num">130ms</span>
+          <span class="cs-result-lbl">Average API response (down from 420ms)</span>
+        </div>
+        <div class="cs-result-item">
+          <span class="cs-result-num">4×</span>
+          <span class="cs-result-lbl">Peak traffic handled with zero incidents</span>
+        </div>
+        <div class="cs-result-item">
+          <span class="cs-result-num">+40%</span>
+          <span class="cs-result-lbl">Conversion rate improvement post-launch</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cs-cta-section">
+      <div class="cs-cta-inner">
+        <p class="cs-cta-overline">Like what you see?</p>
+        <h2 class="cs-cta-heading">Let's build something great together</h2>
+        <div class="cs-cta-actions">
+          <a href="mailto:yogeshbatthula19@gmail.com" class="contact-btn">
+            Get in touch
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+          <a href="index.html" class="contact-secondary">← Back to portfolio</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>© <span id="year"></span> Yogesh Batthula</span>
+    <span>Designed &amp; built with care</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
