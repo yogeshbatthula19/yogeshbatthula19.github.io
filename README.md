@@ -21,10 +21,28 @@ If the site is not yet live, follow these steps:
 2. Click **Settings** → scroll to **Pages** in the left sidebar.
 3. Under **Build and deployment → Source**, select **Deploy from a branch**.
 4. Choose **`main`** branch and **`/ (root)`** folder, then click **Save**.
-5. Wait ~1 minute. GitHub will show a green banner with your live URL:  
+5. Wait ~2 minutes. GitHub will show a green banner with your live URL:  
    `Your site is live at https://yogeshbatthula19.github.io`
 
 > **Tip** – Once GitHub Pages is enabled, every time you push to `main` the site automatically updates.
+
+---
+
+## 🔧 Troubleshooting – Site Not Visible
+
+If the site still isn't loading after enabling GitHub Pages, check the following:
+
+| Issue | Fix |
+|-------|-----|
+| Pages not enabled | Follow the setup steps above to enable Pages in **Settings → Pages** |
+| Wrong branch selected | Make sure **`main`** branch is selected (not `master` or another branch) |
+| Changes not on `main` | Merge your PR into `main` so the latest files are deployed |
+| Jekyll processing error | A `.nojekyll` file is included in this repo to bypass Jekyll processing |
+| Still loading | Wait a few more minutes — GitHub Pages can take up to 5 minutes to deploy |
+| 404 error | Confirm `index.html` exists at the root of the `main` branch |
+
+You can check the deployment status at:  
+**https://github.com/yogeshbatthula19/yogeshbatthula19.github.io/deployments**
 
 ---
 
