@@ -4,14 +4,11 @@ A personal portfolio website built with pure HTML, CSS, and JavaScript, hosted o
 
 ---
 
-## 🌐 Live Website URLs
+## 🌐 Live Website URL
 
-| URL | Description |
-|-----|-------------|
-| **https://staywithyogesh.me** | Primary URL (custom domain via `CNAME`) |
-| **https://yogeshbatthula19.github.io** | Default GitHub Pages URL |
+👉 **https://yogeshbatthula19.github.io**
 
-Both URLs serve the same site. The custom domain `staywithyogesh.me` takes precedence once DNS is configured.
+This is the default GitHub Pages URL for this repository and is always available once GitHub Pages is enabled on the `main` branch.
 
 ---
 
@@ -27,7 +24,7 @@ If the site is not yet live, follow these steps:
 5. Wait ~1 minute. GitHub will show a green banner with your live URL:  
    `Your site is live at https://yogeshbatthula19.github.io`
 
-> **Custom domain** – If `staywithyogesh.me` is not resolving yet, make sure your DNS registrar has an `A` record pointing to GitHub's IP addresses (185.199.108.153 – 185.199.111.153) or a `CNAME` record pointing `www` to `yogeshbatthula19.github.io`.
+> **Tip** – Once GitHub Pages is enabled, every time you push to `main` the site automatically updates.
 
 ---
 
@@ -37,8 +34,7 @@ If the site is not yet live, follow these steps:
 yogeshbatthula19.github.io/
 ├── index.html   # Main portfolio page (Hero, About, Skills, Projects, Contact)
 ├── styles.css   # Dark-themed responsive stylesheet
-├── script.js    # Typed text, scroll animations, mobile nav, contact form
-└── CNAME        # Custom domain configuration (staywithyogesh.me)
+└── script.js    # Typed text, scroll animations, mobile nav, contact form
 ```
 
 ---
