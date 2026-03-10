@@ -85,7 +85,10 @@
 
       <!-- BIO: about text -->
       <article class="card c-bio white">
-        <p class="card-eyebrow">About</p>
+        <div class="bio-header">
+          <img src="images/profile.svg" alt="Yogesh Batthula" class="bio-avatar" width="56" height="56" />
+          <p class="card-eyebrow">About</p>
+        </div>
         <p class="bio-text">
           I'm <strong>Yogesh Batthula</strong> — a developer who bridges engineering and design.
           I specialize in React, Node.js, and cloud systems. I care deeply about the experience
@@ -169,14 +172,8 @@
 
       <!-- FEATURED PROJECT -->
       <article class="card c-feat dark" id="work">
-        <!-- 3D sphere illustration -->
-        <div class="feat-3d" aria-hidden="true">
-          <div class="sphere-3d">
-            <div class="sphere-ring ring-1"></div>
-            <div class="sphere-ring ring-2"></div>
-            <div class="sphere-ring ring-3"></div>
-            <div class="sphere-core"></div>
-          </div>
+        <div class="proj-img-wrap">
+          <img src="images/ecommerce-preview.svg" alt="E-Commerce Platform preview" width="480" height="280" loading="lazy" />
         </div>
         <div class="proj-meta-row">
           <span class="proj-num">01</span>
@@ -200,6 +197,9 @@
 
       <!-- PROJECT 2 -->
       <article class="card c-p2 white">
+        <div class="proj-img-wrap">
+          <img src="images/task-preview.svg" alt="Task Management Dashboard preview" width="480" height="280" loading="lazy" />
+        </div>
         <div class="proj-meta-row">
           <span class="proj-num on-light">02</span>
           <span class="proj-type-badge on-light">Web App</span>
@@ -221,6 +221,9 @@
 
       <!-- PROJECT 3 -->
       <article class="card c-p3 dark">
+        <div class="proj-img-wrap">
+          <img src="images/ai-preview.svg" alt="AI Analytics Engine preview" width="480" height="280" loading="lazy" />
+        </div>
         <div class="proj-meta-row">
           <span class="proj-num">03</span>
           <span class="proj-type-badge">ML · API</span>

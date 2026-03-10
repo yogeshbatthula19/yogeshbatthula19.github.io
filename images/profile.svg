@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="pg" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#2e2e2e"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+    <clipPath id="circle-clip">
+      <circle cx="100" cy="100" r="100"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#pg)"/>
+
+  <!-- Body / shoulders -->
+  <ellipse cx="100" cy="175" rx="56" ry="42" fill="#222222"/>
+
+  <!-- Head -->
+  <circle cx="100" cy="80" r="30" fill="#2e2e2e"/>
+
+  <!-- Subtle highlight ring -->
+  <circle cx="100" cy="100" r="98" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+
+  <!-- Inner light arc -->
+  <path d="M 52 72 A 52 52 0 0 1 148 72" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+</svg>
