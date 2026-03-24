@@ -15,13 +15,24 @@
         extend: {
           colors: {
             primary: '#7b39fc',
-            darkPurple: '#2b2344'
+            primaryHover: '#8a51fc',
+            darkPurple: '#2b2344',
+            darkPurpleHover: '#3a2f60',
+            pillBackground: 'rgba(85,80,110,0.4)',
+            pillBorder: 'rgba(164,132,215,0.5)',
+            neutralBorder: '#d4d4d4',
+            neutralText: '#171717',
+            offWhite: '#f6f7f9',
+            softWhite: '#fafafa'
           },
           fontFamily: {
             manrope: ['Manrope', 'sans-serif'],
             cabin: ['Cabin', 'sans-serif'],
             instrument: ['Instrument Serif', 'serif'],
             inter: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            primaryCta: '0 8px 20px rgba(123,57,252,0.25)'
           }
         }
       }
@@ -30,7 +41,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen overflow-x-hidden bg-black">
-  <section class="relative min-h-screen">
+  <section id="home" class="relative min-h-screen">
     <video
       class="absolute inset-0 h-full w-full object-cover"
       src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4"
@@ -44,27 +55,27 @@
     <div class="relative z-20">
       <nav class="relative z-20 w-full bg-transparent px-6 py-[16px] md:px-[120px]">
         <div class="flex items-center justify-between">
-          <a href="#" aria-label="Datacore home" class="inline-flex items-center">
+          <a href="#home" aria-label="Datacore home" class="inline-flex items-center">
             <svg width="34" height="16" viewBox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M1.04356 6.35771L13.6437 0.666504L26.2438 6.35771L13.6437 12.0489Z" fill="white" />
             </svg>
           </a>
 
           <div class="hidden items-center gap-8 lg:flex">
-            <a href="#" class="font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">Home</a>
-            <a href="#" class="inline-flex items-center gap-1 font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">
+            <a href="#home" class="font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">Home</a>
+            <a href="#home" class="inline-flex items-center gap-1 font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">
               Services
               <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.22 7.22a.75.75 0 011.06 0L10 10.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 8.28a.75.75 0 010-1.06z" clip-rule="evenodd" />
               </svg>
             </a>
-            <a href="#" class="font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">Reviews</a>
-            <a href="#" class="font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">Contact us</a>
+            <a href="#home" class="font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">Reviews</a>
+            <a href="mailto:yogeshbatthula19@gmail.com" class="font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">Contact us</a>
           </div>
 
           <div class="hidden items-center gap-3 lg:flex">
-            <button class="rounded-lg border border-[#d4d4d4] bg-white px-4 py-2 font-manrope text-sm font-semibold text-[#171717]">Sign In</button>
-            <button class="rounded-lg bg-primary px-4 py-2 font-manrope text-sm font-semibold text-[#fafafa] shadow-[0_8px_20px_rgba(123,57,252,0.25)]">Get Started</button>
+            <a href="mailto:yogeshbatthula19@gmail.com?subject=Sign%20In%20Request" aria-label="Sign in to your account" class="rounded-lg border border-neutralBorder bg-white px-4 py-2 font-manrope text-sm font-semibold text-neutralText">Sign In</a>
+            <a href="#home" aria-label="Get started with Datacore" class="rounded-lg bg-primary px-4 py-2 font-manrope text-sm font-semibold text-softWhite shadow-primaryCta">Get Started</a>
           </div>
 
           <button id="menuToggle" class="text-white lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -86,21 +97,21 @@
         </button>
       </div>
       <div class="mt-12 flex flex-col items-start gap-8">
-        <a href="#" class="mobile-link font-manrope text-2xl font-medium text-white">Home</a>
-        <a href="#" class="mobile-link font-manrope text-2xl font-medium text-white">Services</a>
-        <a href="#" class="mobile-link font-manrope text-2xl font-medium text-white">Reviews</a>
-        <a href="#" class="mobile-link font-manrope text-2xl font-medium text-white">Contact us</a>
+        <a href="#home" class="mobile-link font-manrope text-2xl font-medium text-white">Home</a>
+        <a href="#home" class="mobile-link font-manrope text-2xl font-medium text-white">Services</a>
+        <a href="#home" class="mobile-link font-manrope text-2xl font-medium text-white">Reviews</a>
+        <a href="mailto:yogeshbatthula19@gmail.com" class="mobile-link font-manrope text-2xl font-medium text-white">Contact us</a>
       </div>
     </div>
 
     <main class="relative z-10 mx-auto mt-32 flex min-h-[calc(100vh-130px)] max-w-[1100px] flex-col items-center px-6 text-center md:px-10">
-      <div class="inline-flex h-[38px] items-center gap-2 rounded-[10px] border border-[rgba(164,132,215,0.5)] bg-[rgba(85,80,110,0.4)] px-3 backdrop-blur">
+      <div class="inline-flex h-[38px] items-center gap-2 rounded-[10px] border border-pillBorder bg-pillBackground px-3 backdrop-blur">
         <span class="rounded-md bg-primary px-2 py-1 font-cabin text-sm font-medium text-white">New</span>
         <span class="font-cabin text-sm font-medium text-white">Say Hello to Datacore v3.2</span>
       </div>
 
       <h1 class="mt-8 max-w-[980px] font-instrument text-5xl leading-[1.1] text-white md:text-7xl lg:text-[96px]">
-        Book your perfect stay instantly <span class="italic pr-1">and</span> hassle-free
+        Book your perfect stay instantly <span class="italic">and</span> hassle-free
       </h1>
 
       <p class="mt-6 max-w-[662px] font-inter text-lg font-normal text-white/70">
@@ -108,12 +119,12 @@
       </p>
 
       <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-        <button class="rounded-[10px] bg-primary px-7 py-3.5 font-cabin text-base font-medium text-white transition-colors hover:bg-[#8a51fc]">
+        <a href="mailto:yogeshbatthula19@gmail.com" class="rounded-[10px] bg-primary px-7 py-3.5 font-cabin text-base font-medium text-white transition-colors hover:bg-primaryHover">
           Book a Free Demo
-        </button>
-        <button class="rounded-[10px] bg-darkPurple px-7 py-3.5 font-cabin text-base font-medium text-[#f6f7f9] transition-colors hover:bg-[#3a2f60]">
+        </a>
+        <a href="#home" class="rounded-[10px] bg-darkPurple px-7 py-3.5 font-cabin text-base font-medium text-offWhite transition-colors hover:bg-darkPurpleHover">
           Get Started Now
-        </button>
+        </a>
       </div>
     </main>
   </section>
