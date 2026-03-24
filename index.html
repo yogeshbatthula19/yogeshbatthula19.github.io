@@ -3,278 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yogesh Batthula – Full Stack Developer & Software Engineer portfolio." />
-  <title>Yogesh Batthula</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Datacore booking platform hero section." />
+  <title>Datacore Booking</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Instrument+Serif:ital@0;1&family=Inter:wght@400&family=Manrope:wght@500;600&display=swap" rel="stylesheet" />
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7b39fc',
+            primaryHover: '#8a51fc',
+            darkPurple: '#2b2344',
+            darkPurpleHover: '#3a2f60',
+            pillBackground: 'rgba(85,80,110,0.4)',
+            pillBorder: 'rgba(164,132,215,0.5)',
+            neutralBorder: '#d4d4d4',
+            neutralText: '#171717',
+            offWhite: '#f6f7f9',
+            softWhite: '#fafafa'
+          },
+          fontFamily: {
+            manrope: ['Manrope', 'sans-serif'],
+            cabin: ['Cabin', 'sans-serif'],
+            instrument: ['Instrument Serif', 'serif'],
+            inter: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            primaryCta: '0 8px 20px rgba(123,57,252,0.25)'
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen overflow-x-hidden bg-black">
+  <section id="home" class="relative min-h-screen">
+    <video
+      class="absolute inset-0 h-full w-full object-cover"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+      aria-label="Background video"
+    ></video>
 
-  <!-- ===== NAV ===== -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#home" class="nav-brand">YB</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navMenu">
-        <li><a href="#about"   class="nav-link">About</a></li>
-        <li><a href="#work"    class="nav-link">Work</a></li>
-        <li><a href="case-study.html" class="nav-link">Case Study</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <a href="mailto:yogeshbatthula19@gmail.com" class="nav-cta">Let's talk →</a>
+    <div class="relative z-20">
+      <nav class="relative z-20 w-full bg-transparent px-6 py-[16px] md:px-[120px]">
+        <div class="flex items-center justify-between">
+          <a href="#home" aria-label="Datacore home" class="inline-flex items-center">
+            <svg width="34" height="16" viewBox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1.04356 6.35771L13.6437 0.666504L26.2438 6.35771L13.6437 12.0489Z" fill="white" />
+            </svg>
+          </a>
+
+          <div class="hidden items-center gap-8 lg:flex">
+            <a href="#home" class="font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">Home</a>
+            <a href="#home" class="inline-flex items-center gap-1 font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">
+              Services
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.22 7.22a.75.75 0 011.06 0L10 10.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 8.28a.75.75 0 010-1.06z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="#home" class="font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">Reviews</a>
+            <a href="mailto:yogeshbatthula19@gmail.com" class="font-manrope text-sm font-medium text-white transition-opacity hover:opacity-80">Contact us</a>
+          </div>
+
+          <div class="hidden items-center gap-3 lg:flex">
+            <a href="mailto:yogeshbatthula19@gmail.com?subject=Sign%20In%20Request" aria-label="Sign in to your account" class="rounded-lg border border-neutralBorder bg-white px-4 py-2 font-manrope text-sm font-semibold text-neutralText">Sign In</a>
+            <a href="#home" aria-label="Get started with Datacore" class="rounded-lg bg-primary px-4 py-2 font-manrope text-sm font-semibold text-softWhite shadow-primaryCta">Get Started</a>
+          </div>
+
+          <button id="menuToggle" class="text-white lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M3 6h18M3 12h18M3 18h18"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
     </div>
-  </nav>
 
-  <!-- ===== BENTO GRID ===== -->
-  <main class="grid-wrapper" id="home">
-    <div class="bento">
+    <div id="mobileMenu" class="fixed inset-0 z-30 hidden bg-black px-6 py-8 lg:hidden" aria-hidden="true">
+      <div class="flex items-center justify-between">
+        <span class="font-manrope text-sm font-semibold text-white">Menu</span>
+        <button id="closeMenu" class="text-white" aria-label="Close menu">
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-12 flex flex-col items-start gap-8">
+        <a href="#home" class="mobile-link font-manrope text-2xl font-medium text-white">Home</a>
+        <a href="#home" class="mobile-link font-manrope text-2xl font-medium text-white">Services</a>
+        <a href="#home" class="mobile-link font-manrope text-2xl font-medium text-white">Reviews</a>
+        <a href="mailto:yogeshbatthula19@gmail.com" class="mobile-link font-manrope text-2xl font-medium text-white">Contact us</a>
+      </div>
+    </div>
 
-      <!-- HERO: name + tagline -->
-      <article class="card c-hero dark" id="about">
-        <!-- 3D floating cubes illustration -->
-        <div class="hero-3d" aria-hidden="true">
-          <div class="cube cube-lg">
-            <div class="cube-face face-top"></div>
-            <div class="cube-face face-right"></div>
-            <div class="cube-face face-left"></div>
-          </div>
-          <div class="cube cube-md">
-            <div class="cube-face face-top"></div>
-            <div class="cube-face face-right"></div>
-            <div class="cube-face face-left"></div>
-          </div>
-          <div class="cube cube-sm">
-            <div class="cube-face face-top"></div>
-            <div class="cube-face face-right"></div>
-            <div class="cube-face face-left"></div>
-          </div>
-        </div>
-        <p class="hero-eyebrow">Full Stack Developer &amp; Software Engineer</p>
-        <h1 class="hero-name">Yogesh<br/>Batthula</h1>
-        <p class="hero-desc">
-          Building products people love — from pixel-perfect UIs<br/>to scalable back-end systems.
-        </p>
-        <div class="hero-socials">
-          <a href="https://github.com/yogeshbatthula19" target="_blank" rel="noopener" aria-label="GitHub" class="hero-icon">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/yogeshbatthula" target="_blank" rel="noopener" aria-label="LinkedIn" class="hero-icon">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="mailto:yogeshbatthula19@gmail.com" aria-label="Email" class="hero-icon">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          </a>
-        </div>
-      </article>
+    <main class="relative z-10 mx-auto mt-32 flex min-h-[calc(100vh-130px)] max-w-[1100px] flex-col items-center px-6 text-center md:px-10">
+      <div class="inline-flex h-[38px] items-center gap-2 rounded-[10px] border border-pillBorder bg-pillBackground px-3 backdrop-blur">
+        <span class="rounded-md bg-primary px-2 py-1 font-cabin text-sm font-medium text-white">New</span>
+        <span class="font-cabin text-sm font-medium text-white">Say Hello to Datacore v3.2</span>
+      </div>
 
-      <!-- STATUS: availability + experience -->
-      <article class="card c-status light">
-        <div class="status-badge">
-          <span class="status-dot"></span>
-          <span>Available for work</span>
-        </div>
-        <div class="status-exp">
-          <span class="exp-num" data-count="3">3+</span>
-          <span class="exp-label">Years experience</span>
-        </div>
-      </article>
+      <h1 class="mt-8 max-w-[980px] font-instrument text-5xl leading-[1.1] text-white md:text-7xl lg:text-[96px]">
+        Book your perfect stay instantly <span class="italic">and</span> hassle-free
+      </h1>
 
-      <!-- BIO: about text -->
-      <article class="card c-bio white">
-        <div class="bio-header">
-          <img src="images/profile.svg" alt="Yogesh Batthula" class="bio-avatar" width="56" height="56" />
-          <p class="card-eyebrow">About</p>
-        </div>
-        <p class="bio-text">
-          I'm <strong>Yogesh Batthula</strong> — a developer who bridges engineering and design.
-          I specialize in React, Node.js, and cloud systems. I care deeply about the experience
-          people have using software I build. Fast-paced environments where I can continuously
-          learn and grow are where I thrive.
-        </p>
-        <a href="#contact" class="bio-cta">
-          Get in touch
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      <p class="mt-6 max-w-[662px] font-inter text-lg font-normal text-white/70">
+        Discover handpicked hotels, resorts, and stays across your favorite destinations. Enjoy exclusive deals, fast booking, and 24/7 support.
+      </p>
+
+      <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+        <a href="mailto:yogeshbatthula19@gmail.com" class="rounded-[10px] bg-primary px-7 py-3.5 font-cabin text-base font-medium text-white transition-colors hover:bg-primaryHover">
+          Book a Free Demo
         </a>
-      </article>
+        <a href="#home" class="rounded-[10px] bg-darkPurple px-7 py-3.5 font-cabin text-base font-medium text-offWhite transition-colors hover:bg-darkPurpleHover">
+          Get Started Now
+        </a>
+      </div>
+    </main>
+  </section>
 
-      <!-- SKILLS: tech stack -->
-      <article class="card c-skills dark" id="skills">
-        <p class="card-eyebrow">Skills &amp; Stack</p>
-        <div class="skills-wrap">
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">AWS</span>
-          <span class="skill-tag">GraphQL</span>
-          <span class="skill-tag">Spring Boot</span>
-          <span class="skill-tag">Tailwind CSS</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">Redis</span>
-        </div>
-      </article>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-      <!-- STAT 1 -->
-      <article class="card c-s1 white">
-        <span class="stat-num" data-count="20">20+</span>
-        <span class="stat-lbl">Projects built</span>
-      </article>
+    const setMenuState = (isOpen) => {
+      if (!menuToggle || !mobileMenu) return;
+      mobileMenu.classList.toggle('hidden', !isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+      document.body.classList.toggle('overflow-hidden', isOpen);
+    };
 
-      <!-- STAT 2 -->
-      <article class="card c-s2 dark">
-        <span class="stat-num" data-count="10">10+</span>
-        <span class="stat-lbl">Happy clients</span>
-      </article>
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => setMenuState(true));
+    }
 
-      <!-- ROLE: title + location -->
-      <article class="card c-role light">
-        <p class="role-eyebrow">Currently</p>
-        <p class="role-title">Full Stack<br/>Developer</p>
-        <p class="role-location">
-          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          India
-        </p>
-      </article>
+    if (closeMenu) {
+      closeMenu.addEventListener('click', () => setMenuState(false));
+    }
 
-      <!-- SOCIAL: links -->
-      <article class="card c-social dark">
-        <p class="card-eyebrow">Connect</p>
-        <div class="social-list">
-          <a href="https://github.com/yogeshbatthula19" target="_blank" rel="noopener" class="social-item">
-            <span class="social-item-left">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              GitHub
-            </span>
-            <svg class="social-arrow" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/yogeshbatthula" target="_blank" rel="noopener" class="social-item">
-            <span class="social-item-left">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              LinkedIn
-            </span>
-            <svg class="social-arrow" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-          <a href="mailto:yogeshbatthula19@gmail.com" class="social-item">
-            <span class="social-item-left">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              Email
-            </span>
-            <svg class="social-arrow" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- FEATURED PROJECT -->
-      <article class="card c-feat dark" id="work">
-        <div class="proj-img-wrap">
-          <img src="images/ecommerce-preview.svg" alt="E-Commerce Platform preview" width="480" height="280" loading="lazy" />
-        </div>
-        <div class="proj-meta-row">
-          <span class="proj-num">01</span>
-          <span class="proj-type-badge">Featured Project</span>
-        </div>
-        <h2 class="proj-title">E-Commerce<br/>Platform</h2>
-        <p class="proj-desc">
-          A full-featured online store with real-time inventory, secure checkout, and an intuitive
-          admin dashboard. Built for scale using a microservices architecture on AWS.
-        </p>
-        <div class="proj-footer">
-          <div class="proj-tags">
-            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
-          </div>
-          <a href="case-study.html" class="proj-link">
-            Case Study
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- PROJECT 2 -->
-      <article class="card c-p2 white">
-        <div class="proj-img-wrap">
-          <img src="images/task-preview.svg" alt="Task Management Dashboard preview" width="480" height="280" loading="lazy" />
-        </div>
-        <div class="proj-meta-row">
-          <span class="proj-num on-light">02</span>
-          <span class="proj-type-badge on-light">Web App</span>
-        </div>
-        <h3 class="proj-title-sm on-light">Task Management<br/>Dashboard</h3>
-        <p class="proj-desc-sm on-light">
-          Real-time collaborative workspace with drag-and-drop boards,
-          team analytics, and smart notifications.
-        </p>
-        <div class="proj-footer on-light-border">
-          <div class="proj-tags on-light-tags">
-            <span>React</span><span>GraphQL</span><span>Redis</span>
-          </div>
-          <a href="https://github.com/yogeshbatthula19" target="_blank" rel="noopener" class="proj-link on-light-link">
-            View →
-          </a>
-        </div>
-      </article>
-
-      <!-- PROJECT 3 -->
-      <article class="card c-p3 dark">
-        <div class="proj-img-wrap">
-          <img src="images/ai-preview.svg" alt="AI Analytics Engine preview" width="480" height="280" loading="lazy" />
-        </div>
-        <div class="proj-meta-row">
-          <span class="proj-num">03</span>
-          <span class="proj-type-badge">ML · API</span>
-        </div>
-        <h3 class="proj-title-sm">AI Analytics<br/>Engine</h3>
-        <p class="proj-desc-sm">
-          Predictive analytics platform processing millions of data points,
-          with custom dashboards and ML-powered insights.
-        </p>
-        <div class="proj-footer">
-          <div class="proj-tags">
-            <span>Python</span><span>TensorFlow</span><span>AWS</span>
-          </div>
-          <a href="https://github.com/yogeshbatthula19" target="_blank" rel="noopener" class="proj-link">
-            View →
-          </a>
-        </div>
-      </article>
-
-      <!-- CONTACT CTA -->
-      <article class="card c-ctact dark" id="contact">
-        <div class="contact-text-wrap">
-          <p class="contact-overline">Let's work together</p>
-          <h2 class="contact-heading">Have a project<br/>in mind?</h2>
-        </div>
-        <div class="contact-actions">
-          <a href="mailto:yogeshbatthula19@gmail.com" class="contact-btn">
-            Send me an email
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/yogeshbatthula" target="_blank" rel="noopener" class="contact-secondary">
-            Connect on LinkedIn
-          </a>
-        </div>
-      </article>
-
-      <!-- HIRE TYPES -->
-      <article class="card c-hire white">
-        <p class="hire-label">Open to</p>
-        <p class="hire-types">Freelance<br/>Full-time<br/>Contract</p>
-      </article>
-
-    </div><!-- /.bento -->
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <span>© <span id="year"></span> Yogesh Batthula</span>
-    <span>Designed &amp; built with care</span>
-  </footer>
-
-  <script src="script.js"></script>
+    document.querySelectorAll('.mobile-link').forEach((link) => {
+      link.addEventListener('click', () => setMenuState(false));
+    });
+  </script>
 </body>
 </html>
